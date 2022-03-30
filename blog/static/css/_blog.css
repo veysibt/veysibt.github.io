@@ -1,0 +1,110 @@
+a { 
+    color: inherit;
+    text-decoration: none;
+ } 
+#thumbnail{
+    height: 150px;
+    width: 200px;
+    overflow-x: hidden;
+}
+.thumbnail-row{
+    padding-top: 10px;    
+    margin-bottom: 8px;
+    position: relative;
+    overflow-x: hidden;
+}
+.context-title{    
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.context-detail{
+    font-size: 12px;
+    margin-bottom: 4px;
+    margin-top: 10px;
+    
+}
+
+.context-info-grid{
+    text-decoration: none;
+    display: grid;
+    color :white;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.context-grid{
+    display: grid;
+    position: block;
+    overflow: visible;
+   
+    column-gap: 16px;
+    row-gap: 40px;
+       
+}
+.context-preview{ 
+    display: flex;
+    position:inline-block;
+    margin-right: 5px;
+    margin-left: 30px;
+    text-align: center;
+    width: 1000px;
+    padding: 5px 35px 5px;
+    padding-right: 5px ;  
+    border-radius: 5px;
+    padding-left: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+    0 2px 2px rgba(0,0,0,0.12), 
+    0 4px 4px rgba(0,0,0,0.12), 
+    0 8px 8px rgba(0,0,0,0.12),
+    0 16px 16px rgba(0,0,0,0.12);
+}
+.context-preview::after{
+    box-shadow: 0 5px 15px rgb(2, 2, 2);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.context-preview:hover{
+    box-shadow: 0 5px 15px rgb(255, 255, 255);
+}
+.context-preview:hover::after{
+    opacity: 1;
+}
+
+@media(max-width:1000px){
+    .context-preview{ 
+        display:block;
+        position:relative;
+        margin-right: 5px;
+        margin-left: 0px;
+        text-align: center;
+        width: auto;
+        left:0;
+        padding-right: 5px ;  
+        border-radius: 5px;
+        padding-left: 5px;        
+    }
+    .context-info-grid {
+        display: grid;
+        position: relative;
+        grid-template-rows: 1fr 1fr;
+    }
+   .context-detail{
+       overflow: hidden;
+       margin-bottom: 10px;
+   }
+   .context-title{
+       top: 0;
+       margin-top: 0;
+       padding-top: 0;
+   }
+   #thumbnail{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+   
+    
+}

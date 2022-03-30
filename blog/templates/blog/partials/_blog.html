@@ -1,0 +1,28 @@
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'css/_blog.css'%}">
+{% endblock %}
+
+   
+        
+<div class="context-preview" href="{% url 'blog_details' blog.slug %}">
+    
+    <a href="{% url 'blog_details' blog.slug %}">
+        <img href="{% url 'blog_details' blog.slug %}" id="thumbnail"  src="{{blog.image.url}}">  
+    </a>              
+              
+             
+        <div href="{% url 'blog_details' blog.slug %}" class="context-info-grid" >               
+            <a href="{% url 'blog_details' blog.slug %}" class="context-title" >{{blog.title}}</a>
+            <a href="{% url 'blog_details' blog.slug %}" class="context-detail" >{{ blog.description|striptags|safe|escape|slice:"0:50" }}</a>
+                          
+        </div>
+    
+</div>  
+        
+     
+    
+
+
+
