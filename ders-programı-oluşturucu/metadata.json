@@ -1,0 +1,5 @@
+{
+  "name": "Ders Programı Oluşturucu",
+  "description": "Öğrenciler ve öğretmenler için haftalık ders programı hazırlama ve PNG olarak indirme aracı.",
+  "requestFramePermissions": []
+}
